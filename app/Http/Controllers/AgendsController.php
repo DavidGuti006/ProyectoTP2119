@@ -21,7 +21,7 @@ class AgendsController extends Controller
      */
     public function create()
     {
-        //
+        return view('agendscreate');
     }
 
     /**
@@ -29,7 +29,12 @@ class AgendsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $agends= new Agends();
+        $agends->name=$request->input('name');
+        $agends->description=$request->input('description');
+        $agends->statuses_id=1;
+        $agends->save();
+        return redirect()->back();
     }
 
     /**

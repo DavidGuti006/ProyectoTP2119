@@ -8,6 +8,7 @@
 
 @section('content')
     <p>Bienvenido a las agendas</p>
+    <a name="" id="" class="btn btn-primary" href="agends/create" role="button">Crear Agenda</a>
 @stop
 
 @section('css')

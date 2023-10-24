@@ -3,6 +3,7 @@
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\AgendsController;
 use App\Http\Controllers\EventsController;
+use App\Models\Agends;
 use App\Models\Events;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -24,12 +25,13 @@ Route::get('/', function () {
 
 //crear rutas
 Route::resource('admin/agends', AgendsController::class);
-
+Route::post('admin/agends/create', [AgendsController::class, 'create'])->name('admin.agends.create');
+Route::post('admin/agends/store', [AgendsController::class, 'store'])->name('admin.agends.store');
 
 //creacion de eventos
 Route::resource('admin/events', EventsController::class);
 Route::post('admin/events/create', [EventsController::class, 'create'])->name('admin.events.create');
-Route::get('admin/events/store', [EventsController::class, 'store'])->name('admin.events.store');
+Route::post('admin/events/store', [EventsController::class, 'store'])->name('admin.events.store');
 
 
 

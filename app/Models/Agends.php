@@ -11,5 +11,6 @@ class Agends extends Model
     protected $fillable = [
         'name',
         'description',
+        'statuses_id',
     ];
 }
