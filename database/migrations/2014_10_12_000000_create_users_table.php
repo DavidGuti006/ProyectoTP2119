@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('document')->unique();
             $table->string('age');
             $table->string('password');
+            $table->string('img');
             $table->rememberToken();
             $table->timestamps();
             $table->unsignedBigInteger('statuses_id');
