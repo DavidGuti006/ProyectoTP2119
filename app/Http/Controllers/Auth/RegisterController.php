@@ -71,6 +71,6 @@ class RegisterController extends Controller
             'document' =>$data['document'],
             'age' =>$data['age'],
             'statuses_id'=>1,
-        ])->assignRole('empleado');;
+        ])->assignRole('admin');;
     }
 }

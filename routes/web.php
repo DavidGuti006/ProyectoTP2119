@@ -24,17 +24,10 @@ Route::get('/', function () {
 });
 
 //crear rutas
-Route::resource('admin/agends', AgendsController::class);
-Route::post('admin/agends/create', [AgendsController::class, 'create'])->name('admin.agends.create');
-Route::post('admin/agends/store', [AgendsController::class, 'store'])->name('admin.agends.store');
+Route::resource('admin/agends', AgendsController::class)->names('admin.agends');
 
 //creacion de eventos
-Route::resource('admin/events', EventsController::class);
-Route::post('admin/events/create', [EventsController::class, 'create'])->name('admin.events.create');
-Route::post('admin/events/store', [EventsController::class, 'store'])->name('admin.events.store');
-
-
-
+Route::resource('admin/events', EventsController::class)->names('admin.events');
 
 //no borrar
 Auth::routes();
